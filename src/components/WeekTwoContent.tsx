@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import sessionComponents from '@/data/sessionComponents'
 import { useModuleProgress } from '@/hooks/useModuleProgress'
+import AudioPlayer from './AudioPlayer'
 
 export default function WeekTwoContent() {
   const { completeModule, isModuleCompleted } = useModuleProgress()
@@ -119,6 +120,7 @@ export default function WeekTwoContent() {
         
         {sessionComponents.map((component, index) => {
           const isCompleted = completedComponents.includes(component.id)
+          const isMainExercise = component.title === "Main Exercise"
           
           return (
             <div 
@@ -161,9 +163,76 @@ export default function WeekTwoContent() {
                 </span>
               </div>
               
-              <p className={`leading-relaxed ml-10 ${isCompleted ? 'text-gray-400' : 'text-gray-300'}`}>
+              <p className={`leading-relaxed ml-10 mb-4 ${isCompleted ? 'text-gray-400' : 'text-gray-300'}`}>
                 {component.description}
               </p>
+
+              {/* Audio Player for Main Exercise */}
+              {isMainExercise && (
+                <div className="ml-10 mt-6">
+                  <div className="mb-4">
+                    <h4 className="text-white font-medium mb-2 flex items-center">
+                      <span className="w-6 h-6 bg-blue-500/20 rounded-lg flex items-center justify-center mr-2">
+                        🎵
+                      </span>
+                      Guided Exercise Audio
+                    </h4>
+                    <p className="text-gray-400 text-sm mb-4">
+                      Listen to this guided audio while performing the main exercise. The audio will help you 
+                      connect with your body awareness and enhance your creative flow.
+                    </p>
+                  </div>
+                  
+                  <AudioPlayer
+                    src="/audio/body-awareness-exercise.mp3"
+                    title="Body Awareness & Movement Exercise"
+                    className="max-w-md"
+                  />
+                  
+                  {/* Audio Instructions */}
+                  <div className="mt-4 p-4 bg-blue-900/20 border border-blue-500/30 rounded-lg">
+                    <div className="flex items-start space-x-3">
+                      <div className="text-blue-400 flex-shrink-0">
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                      </div>
+                      <div>
+                        <h5 className="text-blue-300 font-semibold text-sm mb-1">
+                          Audio Instructions
+                        </h5>
+                        <ul className="text-blue-200 text-xs leading-relaxed space-y-1">
+                          <li>• Find a comfortable, quiet space where you can move freely</li>
+                          <li>• Use headphones for the best experience</li>
+                          <li>• Follow along with the guided movements</li>
+                          <li>• Pause anytime if you need to rest or reflect</li>
+                          <li>• The exercise is designed to be repeated multiple times</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Developer Note for Audio */}
+                  <div className="mt-4 p-3 bg-yellow-900/20 border border-yellow-500/30 rounded-lg">
+                    <div className="flex items-start space-x-3">
+                      <div className="text-yellow-400 flex-shrink-0">
+                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                      </div>
+                      <div>
+                        <h6 className="text-yellow-300 font-semibold text-xs mb-1">
+                          Developer Note
+                        </h6>
+                        <p className="text-yellow-200 text-xs leading-relaxed">
+                          Replace <code className="bg-yellow-800/30 px-1 rounded">/audio/body-awareness-exercise.mp3</code> with 
+                          your actual audio file path. Place audio files in the <code className="bg-yellow-800/30 px-1 rounded">public/audio/</code> directory.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           )
         })}
