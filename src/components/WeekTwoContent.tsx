@@ -184,7 +184,7 @@ export default function WeekTwoContent() {
                   </div>
                   
                   <AudioPlayer
-                    src="/audio/mindwondering-online (2).mp3"
+                    src="https://www.dropbox.com/scl/fi/6u6abuzpnjs46nziopbkp/mindwondering-online-2.mp3?rlkey=yvh8y4uo3pxdf1reifeoiadg4&st=ujwrbqcs&dl=1"
                     title="Body Awareness & Movement Exercise"
                     className="max-w-md"
                   />
@@ -213,22 +213,22 @@ export default function WeekTwoContent() {
                     </div>
                   </div>
 
-                  {/* Developer Note for Audio */}
-                  <div className="mt-4 p-3 bg-yellow-900/20 border border-yellow-500/30 rounded-lg">
+                  {/* Updated Developer Note for Audio */}
+                  <div className="mt-4 p-3 bg-green-900/20 border border-green-500/30 rounded-lg">
                     <div className="flex items-start space-x-3">
-                      <div className="text-yellow-400 flex-shrink-0">
+                      <div className="text-green-400 flex-shrink-0">
                         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                       </div>
                       <div>
-                        <h6 className="text-yellow-300 font-semibold text-xs mb-1">
-                          Developer Note
+                        <h6 className="text-green-300 font-semibold text-xs mb-1">
+                          Audio Source Updated
                         </h6>
-                        <p className="text-yellow-200 text-xs leading-relaxed">
-                          Currently using <code className="bg-yellow-800/30 px-1 rounded">/audio/mindwondering-online (2).mp3</code>. 
-                          You can replace this with any audio file by placing it in the <code className="bg-yellow-800/30 px-1 rounded">public/audio/</code> directory 
-                          and updating the <code className="bg-yellow-800/30 px-1 rounded">src</code> prop of the AudioPlayer component.
+                        <p className="text-green-200 text-xs leading-relaxed">
+                          Now using Dropbox hosted audio file: <code className="bg-green-800/30 px-1 rounded">mindwondering-online-2.mp3</code>. 
+                          The audio is streamed directly from Dropbox with the direct download link (dl=1 parameter).
+                          This ensures reliable playback without requiring local file storage.
                         </p>
                       </div>
                     </div>
