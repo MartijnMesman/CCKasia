@@ -30,13 +30,6 @@ export default function Navigation() {
           router.push('/#modules-section')
         }
         break
-      case 'Resources':
-        // For now, scroll to footer or create a resources page later
-        window.scrollTo({
-          top: document.body.scrollHeight,
-          behavior: 'smooth'
-        })
-        break
       case 'Portfolio':
         // Placeholder - could create a portfolio page later
         alert('Portfolio section coming soon! 🎨')
@@ -49,7 +42,6 @@ export default function Navigation() {
   const menuItems = [
     { name: 'Home', action: () => handleNavigation('Home') },
     { name: 'Modules', action: () => handleNavigation('Modules') },
-    { name: 'Resources', action: () => handleNavigation('Resources') },
     { name: 'Portfolio', action: () => handleNavigation('Portfolio') }
   ]
 
