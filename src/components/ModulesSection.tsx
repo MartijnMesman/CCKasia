@@ -23,12 +23,11 @@ export default function ModulesSection() {
       return
     }
 
+    console.log(`Clicking Module ${moduleId}: ${module.title}`)
     setActiveModuleId(moduleId)
-    console.log(`Navigating to Module ${moduleId}: ${module.title}`)
     
-    // Navigate to the specific module page
-    // For now, we'll create routes like /module/1, /module/2, etc.
-    router.push(`/module/${moduleId}`)
+    // Use window.location for immediate navigation
+    window.location.href = `/module/${moduleId}`
   }
 
   return (

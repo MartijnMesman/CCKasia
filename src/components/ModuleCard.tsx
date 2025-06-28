@@ -1,3 +1,5 @@
+'use client'
+
 interface ModuleCardProps {
   module: {
     id: number
@@ -16,6 +18,7 @@ export default function ModuleCard({ module, onClick }: ModuleCardProps) {
   const isOnline = module.type === 'online'
 
   const handleClick = () => {
+    console.log(`ModuleCard clicked: ${module.id}, locked: ${isLocked}`)
     if (!isLocked) {
       onClick(module.id)
     }
@@ -25,7 +28,7 @@ export default function ModuleCard({ module, onClick }: ModuleCardProps) {
     <div
       onClick={handleClick}
       className={`
-        relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-6 transition-all duration-300
+        relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-6 transition-all duration-300 group
         ${isLocked 
           ? 'border-gray-700/50 cursor-not-allowed opacity-60' 
           : 'border-gray-700/50 hover:border-purple-500/50 cursor-pointer hover:bg-gray-800/70 hover:scale-105'
@@ -98,6 +101,13 @@ export default function ModuleCard({ module, onClick }: ModuleCardProps) {
       {/* Hover Effect Overlay */}
       {!isLocked && (
         <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-500/0 to-pink-500/0 hover:from-purple-500/5 hover:to-pink-500/5 transition-all duration-300 pointer-events-none" />
+      )}
+
+      {/* Debug indicator */}
+      {!isLocked && (
+        <div className="absolute bottom-2 left-2 text-xs text-purple-400 opacity-50">
+          Click to open
+        </div>
       )}
     </div>
   )
