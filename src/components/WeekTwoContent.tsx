@@ -11,7 +11,7 @@ export default function WeekTwoContent() {
   
   const moduleInfo = {
     id: 2,
-    title: "Week 2 - Online - Mind Wandering",
+    title: "Mind Wandering", // Clean title without prefix
     week: 2,
     type: "online",
     duration: "1.5 hours",
@@ -371,3 +371,5 @@ export default function WeekTwoContent() {
     </div>
   )
 }
+
+export default WeekTwoContent
