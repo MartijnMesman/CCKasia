@@ -24,6 +24,13 @@ export default function ModuleCard({ module, onClick }: ModuleCardProps) {
     }
   }
 
+  // Helper function to get clean title for display
+  const getCleanTitle = (title: string, moduleId: number) => {
+    // Remove the "Week X - Type -" prefix from all module titles
+    const cleanTitle = title.replace(/^Week \d+ - (Physical|Online) - /, '')
+    return cleanTitle
+  }
+
   return (
     <div
       onClick={handleClick}
@@ -57,9 +64,9 @@ export default function ModuleCard({ module, onClick }: ModuleCardProps) {
         )}
       </div>
 
-      {/* Title */}
+      {/* Title - Now using clean title */}
       <h3 className={`text-xl font-semibold mb-3 ${isLocked ? 'text-gray-400' : 'text-white'}`}>
-        {module.title}
+        {getCleanTitle(module.title, module.id)}
       </h3>
 
       {/* Description */}
