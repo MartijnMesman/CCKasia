@@ -30,7 +30,7 @@ const courseModules = [
     id: 4,
     title: "Week 4 - Online - Intuition",
     type: "online",
-    status: "available", // Changed from "locked" to "available"
+    status: "available",
     duration: "3 hours",
     week: 4,
     description: "Developing and trusting your creative intuition as a guide for artistic decisions"
@@ -39,7 +39,7 @@ const courseModules = [
     id: 5,
     title: "Week 5 - Physical - Resilience",
     type: "physical",
-    status: "locked",
+    status: "available",
     duration: "2 hours",
     week: 5,
     description: "Building creative resilience and learning to navigate challenges in the creative process"
@@ -48,7 +48,7 @@ const courseModules = [
     id: 6,
     title: "Week 6 - Online - Inner Critic",
     type: "online",
-    status: "locked",
+    status: "available",
     duration: "2.5 hours",
     week: 6,
     description: "Understanding and working with your inner critic to enhance rather than hinder creativity"
@@ -57,7 +57,7 @@ const courseModules = [
     id: 7,
     title: "Week 7 - Online - Entrepreneurship",
     type: "online",
-    status: "locked",
+    status: "available",
     duration: "3.5 hours",
     week: 7,
     description: "Exploring the entrepreneurial mindset and turning creative ideas into viable projects"
@@ -66,7 +66,7 @@ const courseModules = [
     id: 8,
     title: "Week 8 - Physical - Creative Courage",
     type: "physical",
-    status: "locked",
+    status: "available",
     duration: "2 hours",
     week: 8,
     description: "Developing the courage to take creative risks and express your authentic voice"
@@ -75,7 +75,7 @@ const courseModules = [
     id: 9,
     title: "Week 9 - Online - Creativity and Technology",
     type: "online",
-    status: "locked",
+    status: "available",
     duration: "2.5 hours",
     week: 9,
     description: "Exploring how technology can enhance and support creative processes and expression"
@@ -84,7 +84,7 @@ const courseModules = [
     id: 10,
     title: "Week 10 - Online - Creative Flow",
     type: "online",
-    status: "locked",
+    status: "available",
     duration: "4 hours",
     week: 10,
     description: "Understanding and cultivating flow states for optimal creative performance"
@@ -93,7 +93,7 @@ const courseModules = [
     id: 11,
     title: "Week 11 - Physical - Your Creative Vision",
     type: "physical",
-    status: "locked",
+    status: "available",
     duration: "1.5 hours",
     week: 11,
     description: "Synthesizing your learning journey and developing your personal creative vision for the future"
