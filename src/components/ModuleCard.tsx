@@ -109,13 +109,6 @@ export default function ModuleCard({ module, onClick }: ModuleCardProps) {
       {!isLocked && (
         <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-500/0 to-pink-500/0 hover:from-purple-500/5 hover:to-pink-500/5 transition-all duration-300 pointer-events-none" />
       )}
-
-      {/* Debug indicator */}
-      {!isLocked && (
-        <div className="absolute bottom-2 left-2 text-xs text-purple-400 opacity-50">
-          Click to open
-        </div>
-      )}
     </div>
   )
 }
