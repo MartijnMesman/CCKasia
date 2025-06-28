@@ -40,7 +40,7 @@ export default function WeekTwoContent() {
       title: "Body Awareness Meditation Guide",
       type: "PDF",
       description: "A comprehensive guide to body awareness meditation techniques for creative practice",
-      url: "#", // Developer can replace with actual URL
+      url: "#", https://www.wired.com/2013/10/how-to-build-creative-confidence-daydream-play-video-games-and-more/
       icon: "📄"
     },
     {
@@ -48,7 +48,7 @@ export default function WeekTwoContent() {
       title: "Movement & Creativity Research Paper",
       type: "Article",
       description: "Scientific research on the connection between physical movement and creative thinking",
-      url: "#", // Developer can replace with actual URL
+      url: "#", https://www.theguardian.com/books/2025/jun/15/the-big-idea-should-we-embrace-boredom
       icon: "📚"
     },
     {
@@ -56,7 +56,7 @@ export default function WeekTwoContent() {
       title: "Guided Movement Exercise Video",
       type: "Video",
       description: "15-minute guided movement session designed to enhance creative flow",
-      url: "#", // Developer can replace with actual URL
+      url: "#", https://www.discovermagazine.com/the-sciences/in-praise-of-mindless-time
       icon: "🎥"
     },
     {
@@ -64,7 +64,7 @@ export default function WeekTwoContent() {
       title: "Body-Mind Connection Worksheet",
       type: "Worksheet",
       description: "Reflective exercises to explore your personal body-mind creative connections",
-      url: "#", // Developer can replace with actual URL
+      url: "#", https://thomasramsoy.com/index.php/2024/08/26/creativity-mind-wandering-and-the-default-mode-network-of-the-brain/
       icon: "📝"
     },
     {
@@ -72,7 +72,15 @@ export default function WeekTwoContent() {
       title: "Recommended Reading List",
       type: "List",
       description: "Curated books and articles about embodied creativity and somatic practices",
-      url: "#", // Developer can replace with actual URL
+      url: "#", https://www.amazon.com/Wandering-Mind-Brain-Youre-Looking/dp/022623861X
+      icon: "📖"
+    }
+     {
+      id: 6,
+      title: "Recommended Reading List",
+      type: "List",
+      description: "Curated books and articles about embodied creativity and somatic practices",
+      url: "#", https://www.youtube.com/watch?v=9O_orVpDlZo&ab_channel=TEDxTalks
       icon: "📖"
     }
   ]
