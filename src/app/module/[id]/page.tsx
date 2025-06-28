@@ -66,9 +66,9 @@ export default function ModulePage() {
   const getGenericModuleResources = (moduleId: number) => [
     {
       id: 1,
-      title: `${module.title} - Study Guide`,
+      title: `${getCleanTitle(module.title)} - Study Guide`,
       type: "PDF",
-      description: `Comprehensive study guide covering all key concepts in ${module.title.toLowerCase()}`,
+      description: `Comprehensive study guide covering all key concepts in ${getCleanTitle(module.title).toLowerCase()}`,
       url: "#", // Developer can replace with actual URL
       icon: "📄"
     },
@@ -106,13 +106,10 @@ export default function ModulePage() {
     }
   ]
 
-  // Helper function to get clean title for display
-  const getCleanTitle = (title: string, moduleId: number) => {
-    if (moduleId === 1) {
-      // For module 1, remove the "Week 1 - Physical -" prefix
-      return "Introduction + Curiosity"
-    }
-    return title
+  // Helper function to get clean title for display - UPDATED to work for all modules
+  const getCleanTitle = (title: string) => {
+    // Remove the "Week X - Type -" prefix from all module titles
+    return title.replace(/^Week \d+ - (Physical|Online) - /, '')
   }
 
   // For now, we'll show the WeekTwoContent for module 2, and a generic template for others
@@ -145,7 +142,7 @@ export default function ModulePage() {
           </div>
           
           <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            {getCleanTitle(module.title, module.id)}
+            {getCleanTitle(module.title)}
           </h1>
           
           <p className="text-lg text-gray-300 leading-relaxed">
