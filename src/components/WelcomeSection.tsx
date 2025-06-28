@@ -1,4 +1,10 @@
+'use client'
+
+import { useRouter } from 'next/navigation'
+
 export default function WelcomeSection() {
+  const router = useRouter()
+
   const infoCards = [
     {
       title: "Study Sessions",
@@ -16,6 +22,26 @@ export default function WelcomeSection() {
       icon: "📝"
     }
   ]
+
+  const handleStartJourney = () => {
+    // Navigate to modules page or scroll to modules section
+    // For now, let's scroll to modules if they exist on the same page
+    // or you can navigate to a dedicated modules page
+    
+    const modulesSection = document.getElementById('modules-section')
+    if (modulesSection) {
+      modulesSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      })
+    } else {
+      // Alternative: Navigate to a modules page
+      // router.push('/modules')
+      
+      // Or show an alert for now
+      alert('Welcome to your creative journey! 🎨\n\nYour learning modules will be available soon. Start exploring the platform to discover new ways to enhance your creativity!')
+    }
+  }
 
   return (
     <section className="py-20 px-4">
@@ -45,8 +71,11 @@ export default function WelcomeSection() {
           ))}
         </div>
 
-        {/* CTA Button */}
-        <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+        {/* CTA Button - Now with click handler */}
+        <button 
+          onClick={handleStartJourney}
+          className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:ring-offset-2 focus:ring-offset-gray-900"
+        >
           Start Your Journey
         </button>
       </div>
