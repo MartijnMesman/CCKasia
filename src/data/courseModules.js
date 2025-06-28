@@ -30,7 +30,7 @@ const courseModules = [
     id: 4,
     title: "Week 4 - Online - Intuition",
     type: "online",
-    status: "locked",
+    status: "available", // Changed from "locked" to "available"
     duration: "3 hours",
     week: 4,
     description: "Developing and trusting your creative intuition as a guide for artistic decisions"

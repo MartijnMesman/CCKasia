@@ -1,11 +1,14 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import sessionComponents from '@/data/sessionComponents'
 import { useModuleProgress } from '@/hooks/useModuleProgress'
 import AudioPlayer from './AudioPlayer'
+import courseModules from '@/data/courseModules'
 
 export default function WeekTwoContent() {
+  const router = useRouter()
   const { completeModule, isModuleCompleted } = useModuleProgress()
   const [completedComponents, setCompletedComponents] = useState<number[]>([])
   
@@ -32,6 +35,30 @@ export default function WeekTwoContent() {
   const handleCompleteModule = () => {
     completeModule(moduleInfo.id)
   }
+
+  // Navigation functions
+  const goToPreviousModule = () => {
+    const prevModule = courseModules.find(m => m.id < moduleInfo.id && m.status === 'available')
+    if (prevModule) {
+      router.push(`/module/${prevModule.id}`)
+    } else {
+      router.push('/')
+    }
+  }
+
+  const goToNextModule = () => {
+    const nextModule = courseModules.find(m => m.id > moduleInfo.id && m.status === 'available')
+    if (nextModule) {
+      router.push(`/module/${nextModule.id}`)
+    } else {
+      // If no next available module, go back to home
+      router.push('/')
+    }
+  }
+
+  // Check if navigation buttons should be enabled
+  const hasPreviousModule = courseModules.some(m => m.id < moduleInfo.id && m.status === 'available')
+  const hasNextModule = courseModules.some(m => m.id > moduleInfo.id && m.status === 'available')
 
   // Sample resources for this module
   const moduleResources = [
@@ -338,6 +365,48 @@ export default function WeekTwoContent() {
             Complete all components to finish the module
           </p>
         )}
+      </div>
+
+      {/* Module Navigation - NEW SECTION */}
+      <div className="mt-12 flex justify-between items-center">
+        <button
+          onClick={goToPreviousModule}
+          disabled={!hasPreviousModule}
+          className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+            hasPreviousModule
+              ? 'bg-gray-700 hover:bg-gray-600 text-white hover:scale-105'
+              : 'bg-gray-800 text-gray-500 cursor-not-allowed'
+          }`}
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+          <span>Previous Module</span>
+        </button>
+
+        <div className="text-center">
+          <button
+            onClick={() => router.push('/')}
+            className="px-4 py-2 text-gray-400 hover:text-white transition-colors duration-200"
+          >
+            Back to Modules
+          </button>
+        </div>
+
+        <button
+          onClick={goToNextModule}
+          disabled={!hasNextModule}
+          className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+            hasNextModule
+              ? 'bg-purple-600 hover:bg-purple-700 text-white hover:scale-105'
+              : 'bg-gray-800 text-gray-500 cursor-not-allowed'
+          }`}
+        >
+          <span>Next Module</span>
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
       </div>
 
       {/* Session Summary */}
