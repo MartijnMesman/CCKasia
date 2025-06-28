@@ -1,9 +1,9 @@
 const sessionComponents = [
   {
     id: 1,
-    title: "Grounding",
+    title: "Anchoring",
     duration: "5 min",
-    description: "Ground yourself in the here and now. Begin each session with conscious breathing and body awareness to be fully present for the creative process."
+    description: "Ground yourself in the present moment. Begin each session with conscious breathing and body awareness to create a stable foundation for the creative process."
   },
   {
     id: 2,
@@ -19,15 +19,15 @@ const sessionComponents = [
   },
   {
     id: 4,
-    title: "Making Meaning",
+    title: "Tier",
     duration: "8 min",
-    description: "Reflect on your experience and discoveries. Connect what you have learned with your personal creative journey and give meaning to the process."
+    description: "Organize and structure your discoveries. Create layers of understanding by categorizing insights and connecting different elements of your learning experience."
   },
   {
     id: 5,
-    title: "Take-Aways",
+    title: "Reflection",
     duration: "7 min",
-    description: "Summarize the key insights and formulate concrete action points. Determine how you can integrate these lessons into your daily creative practice."
+    description: "Reflect deeply on your experience and discoveries. Connect what you have learned with your personal creative journey and integrate insights into your practice."
   }
 ]
 
