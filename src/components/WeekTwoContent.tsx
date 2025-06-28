@@ -179,12 +179,12 @@ export default function WeekTwoContent() {
                     </h4>
                     <p className="text-gray-400 text-sm mb-4">
                       Listen to this guided audio while performing the main exercise. The audio will help you 
-                      connect with your body awareness and enhance your creative flow.
+                      connect with your body awareness and enhance your creative flow through mindful movement.
                     </p>
                   </div>
                   
                   <AudioPlayer
-                    src="/audio/body-awareness-exercise.mp3"
+                    src="/audio/mindwondering-online (2).mp3"
                     title="Body Awareness & Movement Exercise"
                     className="max-w-md"
                   />
@@ -207,6 +207,7 @@ export default function WeekTwoContent() {
                           <li>• Follow along with the guided movements</li>
                           <li>• Pause anytime if you need to rest or reflect</li>
                           <li>• The exercise is designed to be repeated multiple times</li>
+                          <li>• Focus on the connection between your body and creative mind</li>
                         </ul>
                       </div>
                     </div>
@@ -225,8 +226,9 @@ export default function WeekTwoContent() {
                           Developer Note
                         </h6>
                         <p className="text-yellow-200 text-xs leading-relaxed">
-                          Replace <code className="bg-yellow-800/30 px-1 rounded">/audio/body-awareness-exercise.mp3</code> with 
-                          your actual audio file path. Place audio files in the <code className="bg-yellow-800/30 px-1 rounded">public/audio/</code> directory.
+                          Currently using <code className="bg-yellow-800/30 px-1 rounded">/audio/mindwondering-online (2).mp3</code>. 
+                          You can replace this with any audio file by placing it in the <code className="bg-yellow-800/30 px-1 rounded">public/audio/</code> directory 
+                          and updating the <code className="bg-yellow-800/30 px-1 rounded">src</code> prop of the AudioPlayer component.
                         </p>
                       </div>
                     </div>
