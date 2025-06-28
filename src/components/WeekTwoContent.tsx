@@ -37,51 +37,51 @@ export default function WeekTwoContent() {
   const moduleResources = [
     {
       id: 1,
-      title: "Body Awareness Meditation Guide",
-      type: "PDF",
-      description: "A comprehensive guide to body awareness meditation techniques for creative practice",
+      title: "How to Build Creative Confidence",
+      type: "Article",
+      description: "Wired article exploring daydreaming, play, and creative confidence building techniques",
       url: "https://www.wired.com/2013/10/how-to-build-creative-confidence-daydream-play-video-games-and-more/",
       icon: "📄"
     },
     {
       id: 2,
-      title: "Movement & Creativity Research Paper",
+      title: "Should We Embrace Boredom?",
       type: "Article",
-      description: "Scientific research on the connection between physical movement and creative thinking",
+      description: "The Guardian explores the creative benefits of boredom and mental downtime",
       url: "https://www.theguardian.com/books/2025/jun/15/the-big-idea-should-we-embrace-boredom",
       icon: "📚"
     },
     {
       id: 3,
-      title: "Guided Movement Exercise Video",
-      type: "Video",
-      description: "15-minute guided movement session designed to enhance creative flow",
+      title: "In Praise of Mindless Time",
+      type: "Article",
+      description: "Discover Magazine article on the importance of unstructured thinking for creativity",
       url: "https://www.discovermagazine.com/the-sciences/in-praise-of-mindless-time",
       icon: "🎥"
     },
     {
       id: 4,
-      title: "Body-Mind Connection Worksheet",
-      type: "Worksheet",
-      description: "Reflective exercises to explore your personal body-mind creative connections",
+      title: "Creativity, Mind Wandering & the Default Mode Network",
+      type: "Research",
+      description: "Scientific exploration of how mind wandering and brain networks influence creative thinking",
       url: "https://thomasramsoy.com/index.php/2024/08/26/creativity-mind-wandering-and-the-default-mode-network-of-the-brain/",
       icon: "📝"
     },
     {
       id: 5,
-      title: "Recommended Reading List",
-      type: "List",
-      description: "Curated books and articles about embodied creativity and somatic practices",
+      title: "The Wandering Mind Book",
+      type: "Book",
+      description: "Amazon listing for 'The Wandering Mind' - exploring what the brain does when you're not looking",
       url: "https://www.amazon.com/Wandering-Mind-Brain-Youre-Looking/dp/022623861X",
       icon: "📖"
     },
     {
       id: 6,
-      title: "Recommended Reading List",
-      type: "List",
-      description: "Curated books and articles about embodied creativity and somatic practices",
+      title: "The Power of Outrospection TEDx Talk",
+      type: "Video",
+      description: "TEDx presentation on looking outward to find happiness and enhance creativity",
       url: "https://www.youtube.com/watch?v=9O_orVpDlZo&ab_channel=TEDxTalks",
-      icon: "📖"
+      icon: "🎬"
     }
   ]
 
@@ -309,7 +309,7 @@ export default function WeekTwoContent() {
                 Developer Note
               </h4>
               <p className="text-blue-200 text-xs leading-relaxed">
-                The resource URLs now contain actual links to relevant content. 
+                The resource URLs now contain actual links to relevant content about creativity, mind wandering, and boredom. 
                 You can easily add, remove, or modify resources by editing the <code className="bg-blue-800/30 px-1 rounded">moduleResources</code> array in this component.
               </p>
             </div>
