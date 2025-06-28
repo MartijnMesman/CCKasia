@@ -14,7 +14,7 @@ export default function ModulesSection() {
   }
 
   return (
-    <section className="py-20 px-4">
+    <section id="modules-section" className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <div className="text-center mb-16">
