@@ -11,11 +11,11 @@ export default function WeekTwoContent() {
   
   const moduleInfo = {
     id: 2,
-    title: "Body Awareness & Movement",
+    title: "Week 2 - Online - Mind Wandering",
     week: 2,
-    type: "physical",
+    type: "online",
     duration: "1.5 hours",
-    description: "Exploring the connection between physical awareness and creative expression. This module focuses on understanding how our body influences our creative process and how movement can unlock new forms of artistic expression."
+    description: "Exploring the connection between mind wandering and creative expression through guided exercises"
   }
 
   const isModuleComplete = isModuleCompleted(moduleInfo.id)
@@ -93,8 +93,8 @@ export default function WeekTwoContent() {
           <span className="text-sm font-medium text-purple-400">
             Week {moduleInfo.week}
           </span>
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400 border border-green-500/30">
-            🏢 {moduleInfo.type}
+          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400 border border-blue-500/30">
+            💻 Online
           </span>
           <span className="text-sm text-gray-400">
             {moduleInfo.duration}
