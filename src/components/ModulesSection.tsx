@@ -1,16 +1,34 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import ModuleCard from './ModuleCard'
 import courseModules from '@/data/courseModules'
 
 export default function ModulesSection() {
   const [activeModuleId, setActiveModuleId] = useState<number | null>(null)
+  const router = useRouter()
 
   const handleModuleClick = (moduleId: number) => {
+    const module = courseModules.find(m => m.id === moduleId)
+    
+    if (!module) {
+      console.error(`Module ${moduleId} not found`)
+      return
+    }
+
+    // Check if module is locked
+    if (module.status === 'locked') {
+      console.log(`Module ${moduleId} is locked`)
+      return
+    }
+
     setActiveModuleId(moduleId)
-    console.log(`Module ${moduleId} clicked`)
-    // Add navigation logic here
+    console.log(`Navigating to Module ${moduleId}: ${module.title}`)
+    
+    // Navigate to the specific module page
+    // For now, we'll create routes like /module/1, /module/2, etc.
+    router.push(`/module/${moduleId}`)
   }
 
   return (
@@ -44,7 +62,7 @@ export default function ModulesSection() {
             <div className="inline-flex items-center px-6 py-3 bg-purple-500/20 border border-purple-500/30 rounded-full">
               <div className="w-2 h-2 bg-purple-400 rounded-full mr-3 animate-pulse"></div>
               <span className="text-purple-300 font-medium">
-                Module {activeModuleId} selected
+                Loading Module {activeModuleId}...
               </span>
             </div>
           </div>
