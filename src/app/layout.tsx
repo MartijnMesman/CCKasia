@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Gemini Template - Tom Naberink',
-  description: 'Een template om te werken met Gemini AI - Gemaakt door Tom Naberink',
+  title: 'Minimal Dark App',
+  description: 'A minimal Next.js app with dark theme',
 }
 
 export default function RootLayout({
@@ -12,10 +12,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="nl">
-      <body className="bg-gray-100 min-h-screen" suppressHydrationWarning={true}>
+    <html lang="en">
+      <body className="bg-gray-900 text-white font-sans antialiased">
         {children}
       </body>
     </html>
   )
-} 
+}
