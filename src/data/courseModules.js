@@ -1,102 +1,102 @@
 const courseModules = [
   {
     id: 1,
-    title: "Foundation & Mindfulness",
-    type: "online",
+    title: "Week 1 - Physical - Introduction + Curiosity",
+    type: "physical",
     status: "available",
     duration: "2 hours",
     week: 1,
-    description: "Introduction to connected creativity and mindfulness practices"
+    description: "Introduction to connected creativity and developing curiosity as a foundation for creative exploration"
   },
   {
     id: 2,
-    title: "Body Awareness & Movement",
-    type: "physical",
+    title: "Week 2 - Online - Mind Wandering",
+    type: "online",
     status: "available", 
     duration: "1.5 hours",
     week: 2,
-    description: "Exploring the connection between physical awareness and creative expression"
+    description: "Exploring the connection between mind wandering and creative expression through guided exercises"
   },
   {
     id: 3,
-    title: "Visual Perception & Observation",
-    type: "online",
+    title: "Week 3 - Physical - Collaborative Creativity",
+    type: "physical",
     status: "available",
     duration: "2.5 hours", 
     week: 3,
-    description: "Developing keen observation skills and visual literacy"
+    description: "Working together in creative processes and understanding the power of collaborative creation"
   },
   {
     id: 4,
-    title: "Color Theory & Emotion",
-    type: "physical",
+    title: "Week 4 - Online - Intuition",
+    type: "online",
     status: "locked",
     duration: "3 hours",
     week: 4,
-    description: "Understanding color psychology and emotional impact in design"
+    description: "Developing and trusting your creative intuition as a guide for artistic decisions"
   },
   {
     id: 5,
-    title: "Typography & Communication",
-    type: "online",
+    title: "Week 5 - Physical - Resilience",
+    type: "physical",
     status: "locked",
     duration: "2 hours",
     week: 5,
-    description: "The art of visual communication through typography"
+    description: "Building creative resilience and learning to navigate challenges in the creative process"
   },
   {
     id: 6,
-    title: "Composition & Balance",
-    type: "physical",
+    title: "Week 6 - Online - Inner Critic",
+    type: "online",
     status: "locked",
     duration: "2.5 hours",
     week: 6,
-    description: "Creating harmony and visual balance in design compositions"
+    description: "Understanding and working with your inner critic to enhance rather than hinder creativity"
   },
   {
     id: 7,
-    title: "Digital Tools & Techniques",
+    title: "Week 7 - Online - Entrepreneurship",
     type: "online",
     status: "locked",
     duration: "3.5 hours",
     week: 7,
-    description: "Mastering digital design tools and modern techniques"
+    description: "Exploring the entrepreneurial mindset and turning creative ideas into viable projects"
   },
   {
     id: 8,
-    title: "Sustainable Design Practices",
+    title: "Week 8 - Physical - Creative Courage",
     type: "physical",
     status: "locked",
     duration: "2 hours",
     week: 8,
-    description: "Eco-conscious design approaches and sustainable creativity"
+    description: "Developing the courage to take creative risks and express your authentic voice"
   },
   {
     id: 9,
-    title: "Collaborative Creation",
+    title: "Week 9 - Online - Creativity and Technology",
     type: "online",
     status: "locked",
     duration: "2.5 hours",
     week: 9,
-    description: "Working effectively in creative teams and collaborative environments"
+    description: "Exploring how technology can enhance and support creative processes and expression"
   },
   {
     id: 10,
-    title: "Portfolio Development",
-    type: "physical",
+    title: "Week 10 - Online - Creative Flow",
+    type: "online",
     status: "locked",
     duration: "4 hours",
     week: 10,
-    description: "Curating and presenting your creative work professionally"
+    description: "Understanding and cultivating flow states for optimal creative performance"
   },
   {
     id: 11,
-    title: "Integration & Future Practice",
-    type: "online",
+    title: "Week 11 - Physical - Your Creative Vision",
+    type: "physical",
     status: "locked",
     duration: "1.5 hours",
     week: 11,
-    description: "Synthesizing learnings and planning continued creative growth"
+    description: "Synthesizing your learning journey and developing your personal creative vision for the future"
   }
 ]
 
