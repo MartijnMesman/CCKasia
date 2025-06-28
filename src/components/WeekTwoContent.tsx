@@ -156,6 +156,7 @@ export default function WeekTwoContent() {
         {sessionComponents.map((component, index) => {
           const isCompleted = completedComponents.includes(component.id)
           const isMainExercise = component.title === "Main Exercise"
+          const isAnchoring = component.title === "Anchoring"
           
           return (
             <div 
@@ -201,6 +202,45 @@ export default function WeekTwoContent() {
               <p className={`leading-relaxed ml-10 mb-4 ${isCompleted ? 'text-gray-400' : 'text-gray-300'}`}>
                 {component.description}
               </p>
+
+              {/* Preparation Checklist for Anchoring */}
+              {isAnchoring && (
+                <div className="ml-10 mt-6">
+                  <div className="mb-4">
+                    <h4 className="text-white font-medium mb-3 flex items-center">
+                      <span className="w-6 h-6 bg-green-500/20 rounded-lg flex items-center justify-center mr-2">
+                        ✅
+                      </span>
+                      Your preparation checklist:
+                    </h4>
+                  </div>
+                  
+                  <div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4">
+                    <ul className="space-y-2 text-green-200 text-sm">
+                      <li className="flex items-start space-x-3">
+                        <span className="text-green-400 flex-shrink-0 mt-0.5">•</span>
+                        <span>Find a natural setting (park, garden, beach, or even a tree-lined street)</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <span className="text-green-400 flex-shrink-0 mt-0.5">•</span>
+                        <span>Set aside 20 uninterrupted minutes</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <span className="text-green-400 flex-shrink-0 mt-0.5">•</span>
+                        <span>After reading the instructions and downloading the audio we recommend switching your phone to airplane mode</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <span className="text-green-400 flex-shrink-0 mt-0.5">•</span>
+                        <span>Bring headphones</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <span className="text-green-400 flex-shrink-0 mt-0.5">•</span>
+                        <span>Approach with curiosity, not expectations</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              )}
 
               {/* Audio Player for Main Exercise */}
               {isMainExercise && (
