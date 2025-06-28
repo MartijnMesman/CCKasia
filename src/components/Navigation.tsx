@@ -1,22 +1,70 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const router = useRouter()
 
-  const menuItems = ['Home', 'Modules', 'Resources', 'Portfolio']
   const progressPercentage = 18
+
+  const handleNavigation = (item: string) => {
+    setIsMenuOpen(false) // Close mobile menu
+    
+    switch (item) {
+      case 'Home':
+        router.push('/')
+        break
+      case 'Modules':
+        // Scroll to modules section if on home page, otherwise go to home
+        if (window.location.pathname === '/') {
+          const modulesSection = document.getElementById('modules-section')
+          if (modulesSection) {
+            modulesSection.scrollIntoView({ 
+              behavior: 'smooth',
+              block: 'start'
+            })
+          }
+        } else {
+          router.push('/#modules-section')
+        }
+        break
+      case 'Resources':
+        // For now, scroll to footer or create a resources page later
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: 'smooth'
+        })
+        break
+      case 'Portfolio':
+        // Placeholder - could create a portfolio page later
+        alert('Portfolio section coming soon! 🎨')
+        break
+      default:
+        console.log(`Navigation to ${item} not implemented yet`)
+    }
+  }
+
+  const menuItems = [
+    { name: 'Home', action: () => handleNavigation('Home') },
+    { name: 'Modules', action: () => handleNavigation('Modules') },
+    { name: 'Resources', action: () => handleNavigation('Resources') },
+    { name: 'Portfolio', action: () => handleNavigation('Portfolio') }
+  ]
 
   return (
     <nav className="sticky top-0 z-50 bg-gray-800/80 backdrop-blur-md border-b border-gray-700/50">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+          {/* Logo - Clickable to go home */}
           <div className="flex-shrink-0">
-            <h1 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <button
+              onClick={() => router.push('/')}
+              className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent hover:scale-105 transition-transform duration-200"
+            >
               Connected Creativity
-            </h1>
+            </button>
           </div>
 
           {/* Progress Indicator - Desktop */}
@@ -38,13 +86,13 @@ export default function Navigation() {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {menuItems.map((item) => (
-                <a
-                  key={item}
-                  href="#"
+                <button
+                  key={item.name}
+                  onClick={item.action}
                   className="text-gray-300 hover:text-white hover:bg-gray-700/50 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
                 >
-                  {item}
-                </a>
+                  {item.name}
+                </button>
               ))}
             </div>
           </div>
@@ -104,14 +152,13 @@ export default function Navigation() {
               </div>
               
               {menuItems.map((item) => (
-                <a
-                  key={item}
-                  href="#"
-                  className="text-gray-300 hover:text-white hover:bg-gray-700/50 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
-                  onClick={() => setIsMenuOpen(false)}
+                <button
+                  key={item.name}
+                  onClick={item.action}
+                  className="text-gray-300 hover:text-white hover:bg-gray-700/50 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 w-full text-left"
                 >
-                  {item}
-                </a>
+                  {item.name}
+                </button>
               ))}
             </div>
           </div>
