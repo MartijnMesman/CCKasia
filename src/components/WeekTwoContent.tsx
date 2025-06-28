@@ -371,5 +371,3 @@ export default function WeekTwoContent() {
     </div>
   )
 }
-
-export default WeekTwoContent
