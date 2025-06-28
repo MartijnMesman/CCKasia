@@ -235,48 +235,6 @@ export default function ModulePage() {
               </div>
             </div>
 
-            {/* Coming Soon Message */}
-            <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 text-center mb-12">
-              <div className="w-16 h-16 mx-auto mb-6 bg-purple-500/20 rounded-full flex items-center justify-center">
-                <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Interactive Content Coming Soon
-              </h2>
-              
-              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                We're currently developing the interactive content for this module. 
-                In the meantime, check out the resources above to get started with your learning journey.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
-                  onClick={() => router.push('/')}
-                  className="px-6 py-3 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-                >
-                  Back to Modules
-                </button>
-                
-                <button
-                  onClick={() => {
-                    // Navigate to next available module
-                    const nextModule = courseModules.find(m => m.id > module.id && m.status === 'available')
-                    if (nextModule) {
-                      router.push(`/module/${nextModule.id}`)
-                    } else {
-                      router.push('/')
-                    }
-                  }}
-                  className="px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-                >
-                  Next Module
-                </button>
-              </div>
-            </div>
-
             {/* Module Navigation */}
             <div className="mt-12 flex justify-between items-center">
               <button
