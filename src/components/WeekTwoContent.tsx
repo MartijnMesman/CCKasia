@@ -157,6 +157,7 @@ export default function WeekTwoContent() {
           const isCompleted = completedComponents.includes(component.id)
           const isMainExercise = component.title === "Main Exercise"
           const isAnchoring = component.title === "Anchoring"
+          const isContext = component.title === "Context"
           
           return (
             <div 
@@ -238,6 +239,83 @@ export default function WeekTwoContent() {
                         <span>Approach with curiosity, not expectations</span>
                       </li>
                     </ul>
+                  </div>
+                </div>
+              )}
+
+              {/* Mind Wandering Revolution Content for Context */}
+              {isContext && (
+                <div className="ml-10 mt-6">
+                  <div className="bg-blue-900/20 border border-blue-500/30 rounded-lg p-6">
+                    <div className="prose prose-invert max-w-none">
+                      <h3 className="text-blue-300 font-bold text-xl mb-4">The Mind-Wandering Revolution</h3>
+                      
+                      <p className="text-blue-100 mb-4 leading-relaxed">
+                        For too long, we've been told that wandering minds are unproductive minds. Our hustle culture demands constant focus, endless optimization, and perpetual "grinding." But here's what the science actually shows:
+                      </p>
+                      
+                      <p className="text-blue-100 mb-6 leading-relaxed font-medium">
+                        Mind-wandering isn't a bug—it's a feature. When your attention drifts, your brain doesn't shut down. Instead, it shifts into a different mode of operation that's essential for creative thinking.
+                      </p>
+
+                      <h4 className="text-blue-300 font-semibold text-lg mb-3">What Research Reveals</h4>
+                      
+                      <p className="text-blue-100 mb-4 leading-relaxed">
+                        Psychologists now understand that boredom functions like hunger—it's your brain signaling that it needs deeper, more meaningful engagement. When we're constantly plugged in and task-focused, we starve this essential cognitive process.
+                      </p>
+                      
+                      <p className="text-blue-100 mb-4 leading-relaxed">
+                        During spontaneous mind-wandering, your brain activates what neuroscientists call the Default Mode Network (DMN)—a collection of brain regions that light up when you're not focused on specific tasks. This isn't downtime; it's when your brain:
+                      </p>
+
+                      <ul className="text-blue-100 mb-6 space-y-2 ml-4">
+                        <li className="flex items-start space-x-3">
+                          <span className="text-blue-400 flex-shrink-0 mt-1">•</span>
+                          <span>Processes complex, big-picture ideas</span>
+                        </li>
+                        <li className="flex items-start space-x-3">
+                          <span className="text-blue-400 flex-shrink-0 mt-1">•</span>
+                          <span>Makes unexpected connections between seemingly unrelated concepts</span>
+                        </li>
+                        <li className="flex items-start space-x-3">
+                          <span className="text-blue-400 flex-shrink-0 mt-1">•</span>
+                          <span>Integrates experiences into creative insights</span>
+                        </li>
+                        <li className="flex items-start space-x-3">
+                          <span className="text-blue-400 flex-shrink-0 mt-1">•</span>
+                          <span>Generates novel solutions to persistent problems</span>
+                        </li>
+                      </ul>
+
+                      <p className="text-blue-100 mb-6 leading-relaxed">
+                        A major study tracking over 1,300 participants found that people who frequently engage in spontaneous mind-wandering score significantly higher on creative thinking assessments.
+                      </p>
+
+                      <h4 className="text-blue-300 font-semibold text-lg mb-3">The Creative Breakthrough Pattern</h4>
+                      
+                      <p className="text-blue-100 mb-4 leading-relaxed">
+                        Many of history's most innovative ideas emerged during moments of mental drift:
+                      </p>
+
+                      <ul className="text-blue-100 mb-6 space-y-2 ml-4">
+                        <li className="flex items-start space-x-3">
+                          <span className="text-blue-400 flex-shrink-0 mt-1">•</span>
+                          <span>Business innovations often strike during walks, showers, or commutes</span>
+                        </li>
+                        <li className="flex items-start space-x-3">
+                          <span className="text-blue-400 flex-shrink-0 mt-1">•</span>
+                          <span>Artistic breakthroughs frequently come when creators step away from their work</span>
+                        </li>
+                        <li className="flex items-start space-x-3">
+                          <span className="text-blue-400 flex-shrink-0 mt-1">•</span>
+                          <span>Scientific discoveries regularly happen during periods of "relaxed attention"</span>
+                        </li>
+                      </ul>
+
+                      <p className="text-blue-100 font-medium leading-relaxed">
+                        The pattern is clear: when we give our minds permission to wander, creativity follows.
+                      </p>
+                    </div>
                   </div>
                 </div>
               )}
