@@ -159,6 +159,7 @@ export default function WeekTwoContent() {
           const isAnchoring = component.title === "Anchoring"
           const isContext = component.title === "Context"
           const isTier = component.title === "Tier"
+          const isReflection = component.title === "Reflection"
           
           return (
             <div 
@@ -482,6 +483,98 @@ export default function WeekTwoContent() {
                         <p className="text-orange-200 text-sm leading-relaxed">
                           Each tier is designed to meet you where you are in your creative journey. There's no "right" level—choose what feels most supportive and challenging for your current state. You can always return and try a different tier as your practice develops.
                         </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Reflection Questions */}
+              {isReflection && (
+                <div className="ml-10 mt-6">
+                  <div className="bg-indigo-900/20 border border-indigo-500/30 rounded-lg p-6">
+                    <div className="prose prose-invert max-w-none">
+                      <h3 className="text-indigo-300 font-bold text-xl mb-6 flex items-center">
+                        <span className="text-2xl mr-3">🤔</span>
+                        Reflection Questions
+                      </h3>
+                      
+                      <div className="space-y-6">
+                        {/* Core Reflection Questions */}
+                        <div className="p-4 bg-indigo-800/20 border border-indigo-400/30 rounded-lg">
+                          <h4 className="text-indigo-200 font-semibold text-lg mb-4">
+                            Take a moment to reflect on your experience:
+                          </h4>
+                          
+                          <div className="space-y-4">
+                            <div className="flex items-start space-x-3">
+                              <span className="text-indigo-400 flex-shrink-0 mt-1 text-lg">•</span>
+                              <p className="text-indigo-100 leading-relaxed">
+                                <strong>What did I discover about my mental patterns today?</strong> Notice the rhythm and flow of your thoughts during the exercise.
+                              </p>
+                            </div>
+                            
+                            <div className="flex items-start space-x-3">
+                              <span className="text-indigo-400 flex-shrink-0 mt-1 text-lg">•</span>
+                              <p className="text-indigo-100 leading-relaxed">
+                                <strong>When my mind wandered, what wanted to emerge?</strong> Pay attention to the themes, images, or ideas that surfaced naturally.
+                              </p>
+                            </div>
+                            
+                            <div className="flex items-start space-x-3">
+                              <span className="text-indigo-400 flex-shrink-0 mt-1 text-lg">•</span>
+                              <p className="text-indigo-100 leading-relaxed">
+                                <strong>How might I create more space for this natural creative process?</strong> Consider practical ways to integrate mind-wandering into your daily routine.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Continue Your Learning Section */}
+                        <div className="p-4 bg-indigo-800/30 border border-indigo-400/20 rounded-lg">
+                          <h4 className="text-indigo-200 font-semibold text-lg mb-3 flex items-center">
+                            <span className="w-6 h-6 bg-indigo-500/20 rounded-lg flex items-center justify-center mr-2">
+                              📚
+                            </span>
+                            Continue Your Learning
+                          </h4>
+                          
+                          <p className="text-indigo-100 text-sm leading-relaxed mb-3">
+                            Your mind-wandering journey doesn't end here. Consider these ways to deepen your practice:
+                          </p>
+                          
+                          <ul className="text-indigo-100 text-sm space-y-2 ml-4">
+                            <li className="flex items-start space-x-2">
+                              <span className="text-indigo-400 flex-shrink-0 mt-1">→</span>
+                              <span>Schedule regular "boredom breaks" in your daily routine</span>
+                            </li>
+                            <li className="flex items-start space-x-2">
+                              <span className="text-indigo-400 flex-shrink-0 mt-1">→</span>
+                              <span>Keep a mind-wandering journal to track insights and patterns</span>
+                            </li>
+                            <li className="flex items-start space-x-2">
+                              <span className="text-indigo-400 flex-shrink-0 mt-1">→</span>
+                              <span>Explore the module resources for deeper scientific understanding</span>
+                            </li>
+                            <li className="flex items-start space-x-2">
+                              <span className="text-indigo-400 flex-shrink-0 mt-1">→</span>
+                              <span>Share your discoveries with fellow learners in the community</span>
+                            </li>
+                          </ul>
+                        </div>
+
+                        {/* Personal Integration */}
+                        <div className="p-4 bg-indigo-800/10 border border-indigo-400/20 rounded-lg">
+                          <h5 className="text-indigo-300 font-semibold text-sm mb-2 flex items-center">
+                            <span className="w-5 h-5 bg-indigo-500/20 rounded-lg flex items-center justify-center mr-2">
+                              💭
+                            </span>
+                            Personal Integration
+                          </h5>
+                          <p className="text-indigo-200 text-sm leading-relaxed">
+                            Remember that mind-wandering is a deeply personal experience. Your patterns, insights, and creative breakthroughs will be unique to you. Trust the process and be patient with yourself as you develop this essential creative skill.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
