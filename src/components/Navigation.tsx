@@ -30,10 +30,6 @@ export default function Navigation() {
           router.push('/#modules-section')
         }
         break
-      case 'Portfolio':
-        // Placeholder - could create a portfolio page later
-        alert('Portfolio section coming soon! 🎨')
-        break
       default:
         console.log(`Navigation to ${item} not implemented yet`)
     }
@@ -41,8 +37,7 @@ export default function Navigation() {
 
   const menuItems = [
     { name: 'Home', action: () => handleNavigation('Home') },
-    { name: 'Modules', action: () => handleNavigation('Modules') },
-    { name: 'Portfolio', action: () => handleNavigation('Portfolio') }
+    { name: 'Modules', action: () => handleNavigation('Modules') }
   ]
 
   return (
