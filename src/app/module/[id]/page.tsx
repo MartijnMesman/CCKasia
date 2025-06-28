@@ -106,6 +106,15 @@ export default function ModulePage() {
     }
   ]
 
+  // Helper function to get clean title for display
+  const getCleanTitle = (title: string, moduleId: number) => {
+    if (moduleId === 1) {
+      // For module 1, remove the "Week 1 - Physical -" prefix
+      return "Introduction + Curiosity"
+    }
+    return title
+  }
+
   // For now, we'll show the WeekTwoContent for module 2, and a generic template for others
   const renderModuleContent = () => {
     if (module.id === 2) {
@@ -136,7 +145,7 @@ export default function ModulePage() {
           </div>
           
           <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            {module.title}
+            {getCleanTitle(module.title, module.id)}
           </h1>
           
           <p className="text-lg text-gray-300 leading-relaxed">
