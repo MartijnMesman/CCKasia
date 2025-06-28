@@ -158,6 +158,7 @@ export default function WeekTwoContent() {
           const isMainExercise = component.title === "Main Exercise"
           const isAnchoring = component.title === "Anchoring"
           const isContext = component.title === "Context"
+          const isTier = component.title === "Tier"
           
           return (
             <div 
@@ -382,6 +383,104 @@ export default function WeekTwoContent() {
                           Now using Dropbox hosted audio file: <code className="bg-green-800/30 px-1 rounded">mindwondering-online-2.mp3</code>. 
                           The audio is streamed directly from Dropbox with the direct download link (dl=1 parameter).
                           This ensures reliable playback without requiring local file storage.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Tier Differentiations */}
+              {isTier && (
+                <div className="ml-10 mt-6">
+                  <div className="bg-orange-900/20 border border-orange-500/30 rounded-lg p-6">
+                    <div className="prose prose-invert max-w-none">
+                      <h3 className="text-orange-300 font-bold text-xl mb-6">Choose Your Learning Path</h3>
+                      
+                      {/* Gentle Entry Level */}
+                      <div className="mb-8 p-5 bg-green-800/20 border border-green-500/30 rounded-lg">
+                        <h4 className="text-green-300 font-semibold text-lg mb-3 flex items-center">
+                          <span className="text-2xl mr-3">🌿</span>
+                          Gentle Entry Level
+                        </h4>
+                        
+                        <p className="text-green-100 mb-4 leading-relaxed">
+                          If you couldn't complete the full guided exercise, or if it felt overwhelming:
+                        </p>
+
+                        <ul className="text-green-100 space-y-3 ml-4">
+                          <li className="flex items-start space-x-3">
+                            <span className="text-green-400 flex-shrink-0 mt-1">•</span>
+                            <span>Set up your alarm on the phone for 4 minutes and simply sit in your chosen natural space without any audio.</span>
+                          </li>
+                          <li className="flex items-start space-x-3">
+                            <span className="text-green-400 flex-shrink-0 mt-1">•</span>
+                            <span>Let your eyes rest on something natural (trees, sky, water) without trying to focus</span>
+                          </li>
+                          <li className="flex items-start space-x-3">
+                            <span className="text-green-400 flex-shrink-0 mt-1">•</span>
+                            <span>When thoughts come, just notice them like watching traffic pass by</span>
+                          </li>
+                          <li className="flex items-start space-x-3">
+                            <span className="text-green-400 flex-shrink-0 mt-1">•</span>
+                            <span>If you feel restless or distracted, that's completely normal—just stay curious about what your mind wants to do</span>
+                          </li>
+                        </ul>
+                      </div>
+
+                      {/* Starter Level */}
+                      <div className="mb-8 p-5 bg-blue-800/20 border border-blue-500/30 rounded-lg">
+                        <h4 className="text-blue-300 font-semibold text-lg mb-3 flex items-center">
+                          <span className="text-2xl mr-3">🌱</span>
+                          Starter Level
+                        </h4>
+                        
+                        <p className="text-blue-100 leading-relaxed">
+                          Complete the guided exercise once and continue to the "what did you take forward" part.
+                        </p>
+                      </div>
+
+                      {/* Deep Dive Level */}
+                      <div className="mb-6 p-5 bg-purple-800/20 border border-purple-500/30 rounded-lg">
+                        <h4 className="text-purple-300 font-semibold text-lg mb-3 flex items-center">
+                          <span className="text-2xl mr-3">🌳</span>
+                          Deep Dive Level
+                        </h4>
+                        
+                        <p className="text-purple-100 mb-4 leading-relaxed">
+                          Over the next 2 days, become a detective of your own mind-wandering:
+                        </p>
+
+                        <ul className="text-purple-100 space-y-3 ml-4">
+                          <li className="flex items-start space-x-3">
+                            <span className="text-purple-400 flex-shrink-0 mt-1">•</span>
+                            <span>Notice when your attention naturally drifts throughout the day</span>
+                          </li>
+                          <li className="flex items-start space-x-3">
+                            <span className="text-purple-400 flex-shrink-0 mt-1">•</span>
+                            <span>Log these moments: Where were you? What triggered the wandering? How did you return to focus?</span>
+                          </li>
+                          <li className="flex items-start space-x-3">
+                            <span className="text-purple-400 flex-shrink-0 mt-1">•</span>
+                            <span>Pay special attention to any creative ideas or insights that emerge during or shortly after these wandering periods</span>
+                          </li>
+                          <li className="flex items-start space-x-3">
+                            <span className="text-purple-400 flex-shrink-0 mt-1">•</span>
+                            <span>Track patterns: When does your most productive mind-wandering happen?</span>
+                          </li>
+                        </ul>
+                      </div>
+
+                      {/* Additional Context Section */}
+                      <div className="mt-6 p-4 bg-orange-800/20 border border-orange-400/30 rounded-lg">
+                        <h5 className="text-orange-300 font-semibold text-sm mb-2 flex items-center">
+                          <span className="w-5 h-5 bg-orange-500/20 rounded-lg flex items-center justify-center mr-2">
+                            💡
+                          </span>
+                          Additional Context
+                        </h5>
+                        <p className="text-orange-200 text-sm leading-relaxed">
+                          Each tier is designed to meet you where you are in your creative journey. There's no "right" level—choose what feels most supportive and challenging for your current state. You can always return and try a different tier as your practice develops.
                         </p>
                       </div>
                     </div>
