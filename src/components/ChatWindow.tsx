@@ -19,7 +19,7 @@ export default function ChatWindow({ isOpen, onClose, className = '' }: ChatWind
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: "Hallo! Ik ben je AI coach. Hoe kan ik je vandaag helpen met je creatieve reis?",
+      text: "Hello! I'm your AI coach. How can I help you with your creative journey today?",
       isUser: false,
       timestamp: new Date()
     }
@@ -59,7 +59,7 @@ export default function ChatWindow({ isOpen, onClose, className = '' }: ChatWind
     setTimeout(() => {
       const aiResponse: Message = {
         id: Date.now() + 1,
-        text: "Dat is een interessante vraag! Laten we samen kijken hoe we dit kunnen aanpakken...",
+        text: "That's an interesting question! Let's explore how we can approach this together...",
         isUser: false,
         timestamp: new Date()
       }
@@ -148,7 +148,7 @@ export default function ChatWindow({ isOpen, onClose, className = '' }: ChatWind
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             onKeyPress={handleKeyPress}
-            placeholder="Typ je vraag..."
+            placeholder="Type your question..."
             className="flex-1 px-3 py-2 bg-gray-700 text-white placeholder-gray-400 rounded-lg border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all duration-200 text-sm"
           />
           <button

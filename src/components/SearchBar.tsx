@@ -9,7 +9,7 @@ interface SearchBarProps {
 }
 
 export default function SearchBar({ 
-  placeholder = "Zoek modules, content of resources...", 
+  placeholder = "Search modules, content or resources...", 
   onSearch,
   className = '' 
 }: SearchBarProps) {

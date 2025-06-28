@@ -14,7 +14,7 @@ export default function ChatMessage({ message, className = '' }: ChatMessageProp
   const { text, isUser, timestamp } = message
 
   const formatTime = (date: Date): string => {
-    return date.toLocaleTimeString('nl-NL', { 
+    return date.toLocaleTimeString('en-US', { 
       hour: '2-digit', 
       minute: '2-digit' 
     })

@@ -91,7 +91,7 @@ export default function StatsCard({
       {/* Progress Bar */}
       <div className="space-y-2">
         <div className="flex justify-between items-center">
-          <span className="text-xs text-gray-400">Voortgang</span>
+          <span className="text-xs text-gray-400">Progress</span>
           <span className={`text-xs font-medium ${colors.text}`}>
             {percentage.toFixed(0)}%
           </span>

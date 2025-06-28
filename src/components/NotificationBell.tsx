@@ -17,7 +17,7 @@ export default function NotificationBell({
     <button
       onClick={onClick}
       className={`relative p-2 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 group ${className}`}
-      title={`${count} nieuwe notificaties`}
+      title={`${count} new notifications`}
     >
       {/* Bell Icon */}
       <svg 

@@ -82,7 +82,7 @@ export default function AchievementCard({ achievement, className = '' }: Achieve
             <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
             </svg>
-            {points} punten
+            {points} points
           </span>
         </div>
       )}
@@ -100,21 +100,21 @@ export default function AchievementCard({ achievement, className = '' }: Achieve
         <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 px-4 py-3 bg-gray-900 text-white text-sm rounded-xl opacity-100 transition-all duration-300 pointer-events-none z-20 shadow-xl min-w-max max-w-xs">
           <div className="text-center">
             <div className={`font-semibold mb-1 ${isUnlocked ? 'text-yellow-300' : 'text-gray-300'}`}>
-              {isUnlocked ? '🏆 Behaald!' : '🔒 Vergrendeld'}
+              {isUnlocked ? '🏆 Achieved!' : '🔒 Locked'}
             </div>
             
             {isUnlocked ? (
               <div className="text-xs text-gray-300">
-                Je hebt deze prestatie succesvol behaald!
+                You have successfully achieved this accomplishment!
                 {points && (
                   <div className="mt-1 text-yellow-400">
-                    +{points} punten verdiend
+                    +{points} points earned
                   </div>
                 )}
               </div>
             ) : (
               <div className="text-xs text-gray-400">
-                {requirement || 'Vereisten nog niet voldaan'}
+                {requirement || 'Requirements not yet met'}
               </div>
             )}
           </div>

@@ -48,7 +48,7 @@ export default function WeekTwoContent() {
           </span>
           {isModuleComplete && (
             <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-500/20 text-purple-400 border border-purple-500/30">
-              ✅ Voltooid
+              ✅ Completed
             </span>
           )}
         </div>
@@ -66,10 +66,10 @@ export default function WeekTwoContent() {
       <div className="space-y-6">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl font-semibold text-white">
-            Sessie Onderdelen
+            Session Components
           </h2>
           <div className="text-sm text-gray-400">
-            {completedComponents.length} van {sessionComponents.length} voltooid
+            {completedComponents.length} of {sessionComponents.length} completed
           </div>
         </div>
         
@@ -138,12 +138,12 @@ export default function WeekTwoContent() {
                 : 'bg-gray-700 text-gray-400 cursor-not-allowed'
           }`}
         >
-          {isModuleComplete ? '✅ Module Voltooid' : 'Markeer als Voltooid'}
+          {isModuleComplete ? '✅ Module Completed' : 'Mark as Complete'}
         </button>
         
         {!allComponentsCompleted && !isModuleComplete && (
           <p className="text-sm text-gray-500 mt-2">
-            Voltooi alle onderdelen om de module af te ronden
+            Complete all components to finish the module
           </p>
         )}
       </div>
@@ -151,7 +151,7 @@ export default function WeekTwoContent() {
       {/* Session Summary */}
       <div className="mt-12 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6">
         <h3 className="text-lg font-semibold text-white mb-3">
-          Sessie Overzicht
+          Session Overview
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
           {sessionComponents.map((component) => {
@@ -172,7 +172,7 @@ export default function WeekTwoContent() {
         </div>
         <div className="mt-4 pt-4 border-t border-gray-700/50 text-center">
           <span className="text-sm text-gray-400">
-            Totale sessieduur: {moduleInfo.duration}
+            Total session duration: {moduleInfo.duration}
           </span>
         </div>
       </div>

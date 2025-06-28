@@ -19,11 +19,11 @@ export default function ModulesSection() {
         {/* Section Title */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Cursus Modules
+            Course Modules
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Ontdek je creatieve reis door onze zorgvuldig samengestelde modules, 
-            elk ontworpen om je vaardigheden stap voor stap te ontwikkelen.
+            Discover your creative journey through our carefully curated modules, 
+            each designed to develop your skills step by step.
           </p>
         </div>
 
@@ -44,7 +44,7 @@ export default function ModulesSection() {
             <div className="inline-flex items-center px-6 py-3 bg-purple-500/20 border border-purple-500/30 rounded-full">
               <div className="w-2 h-2 bg-purple-400 rounded-full mr-3 animate-pulse"></div>
               <span className="text-purple-300 font-medium">
-                Module {activeModuleId} geselecteerd
+                Module {activeModuleId} selected
               </span>
             </div>
           </div>

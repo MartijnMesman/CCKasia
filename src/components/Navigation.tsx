@@ -23,7 +23,7 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-4">
             <div className="flex items-center space-x-3">
               <span className="text-sm text-gray-300 font-medium">
-                {progressPercentage}% Voortgang
+                {progressPercentage}% Progress
               </span>
               <div className="w-24 h-2 bg-gray-700 rounded-full overflow-hidden">
                 <div 
@@ -89,7 +89,7 @@ export default function Navigation() {
               <div className="px-3 py-2 mb-2">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm text-gray-300 font-medium">
-                    Voortgang
+                    Progress
                   </span>
                   <span className="text-sm text-purple-400 font-medium">
                     {progressPercentage}%

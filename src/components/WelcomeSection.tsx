@@ -47,7 +47,7 @@ export default function WelcomeSection() {
 
         {/* CTA Button */}
         <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
-          Begin je reis
+          Start Your Journey
         </button>
       </div>
     </section>
