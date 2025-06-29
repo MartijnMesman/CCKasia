@@ -5,12 +5,23 @@ import { useRouter } from 'next/navigation'
 import ModuleCard from './ModuleCard'
 import courseModules from '@/data/courseModules'
 
+// Define the module type to match our data structure
+interface Module {
+  id: number
+  title: string
+  type: 'online' | 'physical'
+  status: 'available' | 'locked'
+  duration: string
+  week: number
+  description: string
+}
+
 export default function ModulesSection() {
   const [activeModuleId, setActiveModuleId] = useState<number | null>(null)
   const router = useRouter()
 
   const handleModuleClick = (moduleId: number) => {
-    const module = courseModules.find(m => m.id === moduleId)
+    const module = courseModules.find((m: Module) => m.id === moduleId)
     
     if (!module) {
       console.error(`Module ${moduleId} not found`)
@@ -46,7 +57,7 @@ export default function ModulesSection() {
 
         {/* Modules Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {courseModules.map((module) => (
+          {courseModules.map((module: Module) => (
             <ModuleCard
               key={module.id}
               module={module}

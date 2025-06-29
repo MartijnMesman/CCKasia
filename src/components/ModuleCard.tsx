@@ -1,15 +1,9 @@
 'use client'
 
+import { CourseModule } from '@/data/courseModules'
+
 interface ModuleCardProps {
-  module: {
-    id: number
-    title: string
-    type: 'online' | 'physical'
-    status: 'available' | 'locked'
-    duration: string
-    week: number
-    description: string
-  }
+  module: CourseModule
   onClick: (moduleId: number) => void
 }
 
