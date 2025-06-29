@@ -322,7 +322,7 @@ export default function WeekTwoContent() {
                 </div>
               )}
 
-              {/* Audio Player for Main Exercise */}
+              {/* Audio Player for Main Exercise - UPDATED WITH LOCAL FILE */}
               {isMainExercise && (
                 <div className="ml-10 mt-6">
                   <div className="mb-4">
@@ -339,7 +339,7 @@ export default function WeekTwoContent() {
                   </div>
                   
                   <AudioPlayer
-                    src="https://www.dropbox.com/scl/fi/6u6abuzpnjs46nziopbkp/mindwondering-online-2.mp3?rlkey=yvh8y4uo3pxdf1reifeoiadg4&st=ujwrbqcs&dl=1"
+                    src="/audio/body-awareness-exercise.mp3"
                     title="Body Awareness & Movement Exercise"
                     className="max-w-md"
                   />
@@ -368,7 +368,7 @@ export default function WeekTwoContent() {
                     </div>
                   </div>
 
-                  {/* Updated Developer Note for Audio */}
+                  {/* Updated Developer Note for Local Audio */}
                   <div className="mt-4 p-3 bg-green-900/20 border border-green-500/30 rounded-lg">
                     <div className="flex items-start space-x-3">
                       <div className="text-green-400 flex-shrink-0">
@@ -378,12 +378,12 @@ export default function WeekTwoContent() {
                       </div>
                       <div>
                         <h6 className="text-green-300 font-semibold text-xs mb-1">
-                          Audio Source Updated
+                          Audio Source Updated for Mobile Compatibility
                         </h6>
                         <p className="text-green-200 text-xs leading-relaxed">
-                          Now using Dropbox hosted audio file: <code className="bg-green-800/30 px-1 rounded">mindwondering-online-2.mp3</code>. 
-                          The audio is streamed directly from Dropbox with the direct download link (dl=1 parameter).
-                          This ensures reliable playback without requiring local file storage.
+                          Audio now hosted locally at <code className="bg-green-800/30 px-1 rounded">/public/audio/body-awareness-exercise.mp3</code>. 
+                          This ensures reliable playback across all devices, especially mobile browsers that have issues with external audio sources.
+                          Download the original file from Dropbox and place it in the public/audio directory.
                         </p>
                       </div>
                     </div>
