@@ -7,8 +7,6 @@ export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const router = useRouter()
 
-  const progressPercentage = 18
-
   const handleNavigation = (item: string) => {
     setIsMenuOpen(false) // Close mobile menu
     
@@ -52,21 +50,6 @@ export default function Navigation() {
             >
               Connected Creativity
             </button>
-          </div>
-
-          {/* Progress Indicator - Desktop */}
-          <div className="hidden md:flex items-center space-x-4">
-            <div className="flex items-center space-x-3">
-              <span className="text-sm text-gray-300 font-medium">
-                {progressPercentage}% Progress
-              </span>
-              <div className="w-24 h-2 bg-gray-700 rounded-full overflow-hidden">
-                <div 
-                  className="h-full bg-purple-500 rounded-full transition-all duration-300"
-                  style={{ width: `${progressPercentage}%` }}
-                />
-              </div>
-            </div>
           </div>
 
           {/* Desktop Menu */}
@@ -120,24 +103,6 @@ export default function Navigation() {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 border-t border-gray-700/50">
-              {/* Progress Indicator - Mobile */}
-              <div className="px-3 py-2 mb-2">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm text-gray-300 font-medium">
-                    Progress
-                  </span>
-                  <span className="text-sm text-purple-400 font-medium">
-                    {progressPercentage}%
-                  </span>
-                </div>
-                <div className="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
-                  <div 
-                    className="h-full bg-purple-500 rounded-full transition-all duration-300"
-                    style={{ width: `${progressPercentage}%` }}
-                  />
-                </div>
-              </div>
-              
               {menuItems.map((item) => (
                 <button
                   key={item.name}
