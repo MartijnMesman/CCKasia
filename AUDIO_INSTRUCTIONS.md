@@ -44,9 +44,9 @@ You can add multiple AudioPlayer components:
 ## AudioPlayer Component Features
 
 ### Props
-- `src` (required):"https://docs.google.com/uc?export=download&id=1HHfnhSYHJKwFLxJgGbWHkK5p80ZvRvrI"
-- `title` (optional):"Body Awareness Exercise"
-- `className` (optional):"w-full max-w-lg"
+- `src="https://docs.google.com/uc?export=download&id=1HHfnhSYHJKwFLxJgGbWHkK5p80ZvRvrI"
+- `title:"Body Awareness Exercise"
+- `className:"w-full max-w-lg"
 
 ### Built-in Features
 - ✅ Play/pause controls
