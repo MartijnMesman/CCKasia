@@ -363,21 +363,9 @@ export default function WeekTwoContent() {
                 </div>
               )}
 
-              export default function MeditationPlayer() {
-  return (
-    <div>
-      <h2>Meditatie-oefening</h2>
-      <iframe
-        width="100%"
-        height="166"
-        scrolling="no"
-        frameBorder="no"
-        allow="autoplay"
-        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/martijn-mesman/mindwondering&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-      ></iframe>
-    </div>
-  );
-}
+                  <AudioPlayer src="/audio/mindwondering-online_compressed.mp3" />
+                </div>
+              )}
               
               {/* Tier Differentiations */}
               {isTier && (
