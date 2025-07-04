@@ -143,7 +143,7 @@ export default function WeekSixContent() {
           
           return (
             <div 
-              key={component.id}
+              key={`component-${component.id}`}
               className={`bg-gray-800 rounded-lg p-6 border transition-all duration-300 ${
                 isCompleted 
                   ? 'border-purple-500/50 bg-purple-500/5' 
@@ -555,7 +555,7 @@ export default function WeekSixContent() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {moduleResources.map((resource) => (
             <div
-              key={resource.id}
+              key={`resource-${resource.id}`}
               className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-4 hover:bg-gray-800/70 hover:border-blue-500/30 transition-all duration-300 group"
             >
               <div className="flex items-start space-x-4">
@@ -666,7 +666,7 @@ export default function WeekSixContent() {
           {sessionComponents.map((component) => {
             const isCompleted = completedComponents.includes(component.id)
             return (
-              <div key={component.id} className="text-center">
+              <div key={`summary-${component.id}`} className="text-center">
                 <div className={`text-sm font-medium mb-1 ${
                   isCompleted ? 'text-purple-300' : 'text-purple-400'
                 }`}>
