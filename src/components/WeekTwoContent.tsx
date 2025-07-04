@@ -338,11 +338,10 @@ export default function WeekTwoContent() {
                     </p>
                   </div>
                   
-                  <AudioPlayer
-                    src="/audio/body-awareness-exercise.mp3"
-                    title="Body Awareness & Movement Exercise"
-                    className="max-w-md"
-                  />
+                 <audio controls>
+                   <source src="https://dl.dropboxusercontent.com/scl/fi/4ne6puf9gr3gdqthvg7sy/mindwondering-online_compressed-8.mp3?rlkey=..." type="audio/mpeg"
+                     Je browser ondersteunt geen audio playback.
+                 </audio>
                   
                   {/* Audio Instructions */}
                   <div className="mt-4 p-4 bg-blue-900/20 border border-blue-500/30 rounded-lg">
