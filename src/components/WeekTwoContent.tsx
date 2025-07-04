@@ -328,23 +328,17 @@ export default function WeekTwoContent() {
                   <div className="mb-4">
                     <h4 className="text-white font-medium mb-2 flex items-center">
                       <span className="w-6 h-6 bg-blue-500/20 rounded-lg flex items-center justify-center mr-2">
-                        🎵
+                        🎯
                       </span>
-                      Guided Exercise Audio
+                      Mind Wandering Exercise
                     </h4>
                     <p className="text-gray-400 text-sm mb-4">
-                      Listen to this guided audio while performing the main exercise. The audio will help you 
-                      connect with your body awareness and enhance your creative flow through mindful movement.
+                      This exercise invites you to explore the natural wandering of your mind in a natural setting. 
+                      Find a quiet outdoor space and allow your attention to drift freely while staying present.
                     </p>
                   </div>
                   
-                  <AudioPlayer 
-                    src="/audio/mindwondering-online_compressed.mp3"
-                    title="Mind Wandering Guided Exercise"
-                  />
-                  
-                  {/* Audio Instructions */}
-                  <div className="mt-4 p-4 bg-blue-900/20 border border-blue-500/30 rounded-lg">
+                  <div className="p-4 bg-blue-900/20 border border-blue-500/30 rounded-lg">
                     <div className="flex items-start space-x-3">
                       <div className="text-blue-400 flex-shrink-0">
                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -353,37 +347,16 @@ export default function WeekTwoContent() {
                       </div>
                       <div>
                         <h5 className="text-blue-300 font-semibold text-sm mb-1">
-                          Audio Instructions
+                          Exercise Instructions
                         </h5>
                         <ul className="text-blue-200 text-xs leading-relaxed space-y-1">
-                          <li>• Find a comfortable, quiet space where you can move freely</li>
-                          <li>• Use headphones for the best experience</li>
-                          <li>• Follow along with the guided movements</li>
-                          <li>• Pause anytime if you need to rest or reflect</li>
-                          <li>• The exercise is designed to be repeated multiple times</li>
-                          <li>• Focus on the connection between your body and creative mind</li>
+                          <li>• Find a natural setting (park, garden, or tree-lined area)</li>
+                          <li>• Sit comfortably and allow your gaze to soften</li>
+                          <li>• Notice when your mind begins to wander naturally</li>
+                          <li>• Don't force focus - let your attention drift freely</li>
+                          <li>• Observe what thoughts, images, or ideas emerge</li>
+                          <li>• Spend 15-20 minutes in this state of open awareness</li>
                         </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Updated Developer Note for Local Audio */}
-                  <div className="mt-4 p-3 bg-green-900/20 border border-green-500/30 rounded-lg">
-                    <div className="flex items-start space-x-3">
-                      <div className="text-green-400 flex-shrink-0">
-                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                      </div>
-                      <div>
-                        <h6 className="text-green-300 font-semibold text-xs mb-1">
-                          Audio Source Updated for Mobile Compatibility
-                        </h6>
-                        <p className="text-green-200 text-xs leading-relaxed">
-                          Audio now hosted locally at <code className="bg-green-800/30 px-1 rounded">/public/audio/body-awareness-exercise.mp3</code>. 
-                          This ensures reliable playback across all devices, especially mobile browsers that have issues with external audio sources.
-                          Download the original file from Dropbox and place it in the public/audio directory.
-                        </p>
                       </div>
                     </div>
                   </div>
