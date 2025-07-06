@@ -11,6 +11,12 @@ import WeekNineContent from '@/components/WeekNineContent'
 import WeekTenContent from '@/components/WeekTenContent'
 import courseModules from '@/data/courseModules'
 
+export async function generateStaticParams() {
+  return courseModules.map((module) => ({
+    id: module.id.toString(),
+  }))
+}
+
 export default function ModulePage() {
   const params = useParams()
   const router = useRouter()
