@@ -364,7 +364,7 @@ export default function WeekTwoContent() {
                   
                   <AudioPlayer src="/audio/mindwondering-online_compressed.mp3" />
                   
-                  <>
+                  <div>
                       <div className="mb-8 p-5 bg-green-800/20 border border-green-500/30 rounded-lg">
                         <h4 className="text-green-300 font-semibold text-lg mb-3 flex items-center">
                           <span className="text-2xl mr-3">🌿</span>
@@ -451,9 +451,7 @@ export default function WeekTwoContent() {
                         </p>
                       </div>
                     </div>
-                  </>
                   </div>
-                </div>
               )}
 
               {/* Reflection Questions */}
