@@ -363,17 +363,6 @@ export default function WeekTwoContent() {
                   </div>
                   
                   <AudioPlayer src="/audio/mindwondering-online_compressed.mp3" />
-                </div>
-              )}
-
-              {/* Tier Differentiations */}
-              {isTier && (
-                <div className="ml-10 mt-6">
-                  <div className="bg-orange-900/20 border border-orange-500/30 rounded-lg p-6">
-                    <div className="prose prose-invert max-w-none">
-                      <h3 className="text-orange-300 font-bold text-xl mb-6">Choose Your Learning Path</h3>
-                      
-                      {/* Gentle Entry Level */}
                       <div className="mb-8 p-5 bg-green-800/20 border border-green-500/30 rounded-lg">
                         <h4 className="text-green-300 font-semibold text-lg mb-3 flex items-center">
                           <span className="text-2xl mr-3">🌿</span>
