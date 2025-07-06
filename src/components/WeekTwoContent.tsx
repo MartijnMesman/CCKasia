@@ -340,15 +340,11 @@ export default function WeekTwoContent() {
                   </div>
                   
                   <div className="p-4 bg-blue-900/20 border border-blue-500/30 rounded-lg">
-             <AudioPlayer
-                      src="/audio/https://github.com/MartijnMesman/CCKasia/raw/a73d5ea485271476da56ef742f70e7c1d326343f/mindwondering-online_compressed.mp3"
-                      title="Mind Wandering Exercise"
-                      className="max-w-md"
-                    />
-                    <div className="flex items-start space-x-3">
+                                 <div className="flex items-start space-x-3">
                       <div className="text-blue-400 flex-shrink-0">
                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                          
                         </svg>
                       </div>
                       <div>
