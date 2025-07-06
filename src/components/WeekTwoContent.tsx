@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import sessionComponents from '@/data/sessionComponents'
 import { useModuleProgress } from '@/hooks/useModuleProgress'
 import AudioPlayer from './AudioPlayer'
+import AudioPlayer from './AudioPlayer'
 import courseModules from '@/data/courseModules'
 
 export default function WeekTwoContent() {
