@@ -363,7 +363,6 @@ export default function WeekTwoContent() {
                   </div>
                   
                   <AudioPlayer src="/audio/mindwondering-online_compressed.mp3" />
-                  
                 </div>
               )}
 
