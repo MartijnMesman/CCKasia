@@ -20,5 +20,9 @@ export default function ModulePage({ params }: ModulePageProps) {
     redirect('/?error=module-locked')
   }
 
-  return <ModuleClientContent module={module} />
+  return (
+    <>
+      <ModuleClientContent module={module} />
+    </>
+  )
 }
