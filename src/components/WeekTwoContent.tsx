@@ -197,11 +197,6 @@ export default function WeekTwoContent() {
                     {component.title}
                   </h3>
                 </div>
-<AudioPlayer
-  src="/audio/mindwondering-online_compressed.mp3"
-  title="Mind Wandering Exercise"
-  className="max-w-md"
-/>
 
                 <span className="text-sm font-medium text-purple-400 bg-purple-500/10 px-3 py-1 rounded-full">
                   {component.duration}
@@ -345,6 +340,11 @@ export default function WeekTwoContent() {
                   </div>
                   
                   <div className="p-4 bg-blue-900/20 border border-blue-500/30 rounded-lg">
+             <AudioPlayer
+                      src="/audio/https://github.com/MartijnMesman/CCKasia/raw/a73d5ea485271476da56ef742f70e7c1d326343f/mindwondering-online_compressed.mp3"
+                      title="Mind Wandering Exercise"
+                      className="max-w-md"
+                    />
                     <div className="flex items-start space-x-3">
                       <div className="text-blue-400 flex-shrink-0">
                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
