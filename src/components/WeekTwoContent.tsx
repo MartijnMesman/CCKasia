@@ -197,6 +197,12 @@ export default function WeekTwoContent() {
                     {component.title}
                   </h3>
                 </div>
+<AudioPlayer
+  src="/audio/mindwondering-online_compressed.mp3"
+  title="Mind Wandering Exercise"
+  className="max-w-md"
+/>
+
                 <span className="text-sm font-medium text-purple-400 bg-purple-500/10 px-3 py-1 rounded-full">
                   {component.duration}
                 </span>
