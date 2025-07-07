@@ -9,6 +9,7 @@ interface ModulePageProps {
 }
 
 export default function ModulePage({ params }: ModulePageProps) {
+}
 export default async function ModulePage({ params }: ModulePageProps) {
   const resolvedParams = await params
   const moduleId = parseInt(resolvedParams.id)
