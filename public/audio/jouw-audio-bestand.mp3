@@ -1,0 +1,17 @@
+<!-- 
+INSTRUCTIES VOOR HET UPLOADEN VAN AUDIO:
+
+1. Sleep je MP3-bestand naar deze map: public/audio/
+2. Geef het een duidelijke naam zonder spaties (gebruik streepjes of underscores)
+3. Ondersteunde formaten: MP3, WAV, OGG, AAC, M4A, FLAC
+
+Voorbeelden van goede bestandsnamen:
+- mijn-audio-oefening.mp3
+- week-3-meditatie.mp3
+- creatieve-sessie-1.mp3
+
+Na het uploaden kun je het bestand gebruiken in componenten zoals:
+<AudioPlayer src="/audio/jouw-bestandsnaam.mp3" title="Jouw Titel" />
+
+Het bestand wordt dan automatisch afgespeeld via de AudioPlayer component.
+-->
