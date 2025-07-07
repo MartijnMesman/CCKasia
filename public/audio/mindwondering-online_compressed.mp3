@@ -1,0 +1,14 @@
+export default function App() {
+  return (
+    <div className="p-4">
+      <h1 className="text-2xl font-bold mb-4">Luister naar de audio</h1>
+      <audio controls className="w-full">
+        <source
+          src="https://dl.dropboxusercontent.com/scl/fi/4ne6puf9er3gdqthvg7sy/mindwondering-online_compressed.mp3?rlkey=nnn745ti16hlwf91s25ixrlk&st=9qh3fhsg&dl=0"
+          type="audio/mpeg"
+        />
+        Je browser ondersteunt geen audio-elementen.
+      </audio>
+    </div>
+  );
+}
