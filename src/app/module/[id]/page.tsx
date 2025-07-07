@@ -9,7 +9,9 @@ interface ModulePageProps {
 }
 
 export default function ModulePage({ params }: ModulePageProps) {
-  const moduleId = parseInt(params.id)
+export default async function ModulePage({ params }: ModulePageProps) {
+  const resolvedParams = await params
+  const moduleId = parseInt(resolvedParams.id)
   const module = courseModules.find(m => m.id === moduleId)
   
   if (!module) {
